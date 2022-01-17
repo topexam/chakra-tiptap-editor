@@ -53,24 +53,38 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.16.7",
+    "@chakra-ui/react": "^1.7.4",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
     "@size-limit/preset-small-lib": "^7.0.5",
     "@storybook/addon-essentials": "^6.4.13",
     "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-links": "^6.4.13",
     "@storybook/addons": "^6.4.13",
     "@storybook/react": "^6.4.13",
+    "@tiptap/extension-underline": "^2.0.0-beta.22",
     "@tsconfig/create-react-app": "^1.0.2",
     "@tsconfig/recommended": "^1.0.1",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "babel-loader": "^8.2.3",
     "dts-cli": "^1.1.6",
+    "framer-motion": "^5",
     "husky": "^7.0.4",
+    "node-sass": "npm:sass",
+    "postcss": "^8.4.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
     "react-is": "^17.0.2",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.48.0",
     "size-limit": "^7.0.5",
     "tslib": "^2.3.1",
     "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@tiptap/react": "^2.0.0-beta.105",
+    "@tiptap/starter-kit": "^2.0.0-beta.171"
   }
 }
