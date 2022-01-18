@@ -85,6 +85,7 @@
   },
   "dependencies": {
     "@tiptap/react": "^2.0.0-beta.105",
-    "@tiptap/starter-kit": "^2.0.0-beta.171"
+    "@tiptap/starter-kit": "^2.0.0-beta.171",
+    "@tiptap/suggestion": "^2.0.0-beta.87"
   }
 }
