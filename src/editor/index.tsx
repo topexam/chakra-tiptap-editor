@@ -7,13 +7,20 @@ import { BubbleMenuBox } from './menus';
 
 import styles from './index.module.scss';
 import { FixedMenuBox } from './menus/fixed-menu-box';
+import { CommandMenuExt, CommandSuggestion } from './extensions';
 
 type Props = {
   hasToolbar?: boolean;
 };
 export const WebEditor = ({ hasToolbar = true }: Props) => {
   const editor = useEditor({
-    extensions: [StarterKitExt, UnderlineExt.configure()],
+    extensions: [
+      StarterKitExt,
+      UnderlineExt.configure(),
+      CommandMenuExt.configure({
+        suggestion: CommandSuggestion,
+      }),
+    ],
     content: '<p>Hello World!</p>',
   });
 
