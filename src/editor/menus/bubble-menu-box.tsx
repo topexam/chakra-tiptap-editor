@@ -1,10 +1,6 @@
-import { HStack, Icon, IconButton } from '@chakra-ui/react';
+import { HStack, Icon, Square } from '@chakra-ui/react';
 import { Editor, BubbleMenu } from '@tiptap/react';
-import {
-  MdFormatBold,
-  MdFormatItalic,
-  MdFormatUnderlined,
-} from 'react-icons/md';
+import { RiBold, RiItalic, RiUnderline } from 'react-icons/ri';
 
 type Props = {
   editor: Editor;
@@ -13,30 +9,34 @@ type Props = {
 export const BubbleMenuBox = ({ editor }: Props) => {
   return (
     <BubbleMenu editor={editor}>
-      <HStack p={1} bg="gray.800" rounded="base">
-        <IconButton
-          size="xs"
-          icon={<Icon as={MdFormatBold} boxSize={4} />}
-          aria-label="Bold"
+      <HStack p={1} rounded="base" borderWidth={1} shadow="lg">
+        <Square
+          rounded="base"
+          p="2px"
+          _hover={{ bg: 'blue.100', cursor: 'pointer' }}
+          color={editor.isActive('bold') ? 'blue.500' : 'inherit'}
           onClick={() => editor.chain().focus().toggleBold().run()}
-          colorScheme={editor.isActive('bold') ? 'whiteAlpha' : 'blackAlpha'}
-        />
-        <IconButton
-          size="xs"
-          icon={<Icon as={MdFormatUnderlined} boxSize={4} />}
-          aria-label="Underline"
+        >
+          <Icon as={RiBold} boxSize={4} />
+        </Square>
+        <Square
+          rounded="base"
+          p="2px"
+          _hover={{ bg: 'blue.100', cursor: 'pointer' }}
+          color={editor.isActive('underline') ? 'blue.500' : 'inherit'}
           onClick={() => editor.chain().focus().toggleUnderline().run()}
-          colorScheme={
-            editor.isActive('underline') ? 'whiteAlpha' : 'blackAlpha'
-          }
-        />
-        <IconButton
-          size="xs"
-          icon={<Icon as={MdFormatItalic} boxSize={4} />}
-          aria-label="Italic"
+        >
+          <Icon as={RiUnderline} boxSize={4} />
+        </Square>
+        <Square
+          rounded="base"
+          p="2px"
+          _hover={{ bg: 'blue.100', cursor: 'pointer' }}
+          color={editor.isActive('italic') ? 'blue.500' : 'inherit'}
           onClick={() => editor.chain().focus().toggleItalic().run()}
-          colorScheme={editor.isActive('italic') ? 'whiteAlpha' : 'blackAlpha'}
-        />
+        >
+          <Icon as={RiItalic} boxSize={4} />
+        </Square>
       </HStack>
     </BubbleMenu>
   );

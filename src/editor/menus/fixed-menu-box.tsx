@@ -1,10 +1,7 @@
-import { HStack, IconButton, Icon } from '@chakra-ui/react';
+import { HStack, Icon, Square } from '@chakra-ui/react';
 import { Editor } from '@tiptap/react';
-import {
-  MdFormatBold,
-  MdFormatUnderlined,
-  MdFormatItalic,
-} from 'react-icons/md';
+
+import { RiBold, RiItalic, RiUnderline } from 'react-icons/ri';
 
 type Props = {
   editor: Editor;
@@ -12,31 +9,34 @@ type Props = {
 
 export const FixedMenuBox = ({ editor }: Props) => {
   return (
-    <HStack p={2} bg="gray.100" rounded="base">
-      <IconButton
-        size="xs"
-        icon={<Icon as={MdFormatBold} boxSize={4} />}
-        aria-label="Bold"
+    <HStack px={2} py={1} bg="gray.50" roundedTop="base">
+      <Square
+        rounded="base"
+        p="2px"
+        _hover={{ bg: 'blue.100', cursor: 'pointer' }}
+        color={editor.isActive('bold') ? 'blue.500' : 'inherit'}
         onClick={() => editor.chain().focus().toggleBold().run()}
-        colorScheme={editor.isActive('bold') ? 'blue' : 'gray'}
-        variant="ghost"
-      />
-      <IconButton
-        size="xs"
-        icon={<Icon as={MdFormatUnderlined} boxSize={4} />}
-        aria-label="Underline"
+      >
+        <Icon as={RiBold} boxSize="18px" />
+      </Square>
+      <Square
+        rounded="base"
+        p="2px"
+        _hover={{ bg: 'blue.100', cursor: 'pointer' }}
+        color={editor.isActive('underline') ? 'blue.500' : 'inherit'}
         onClick={() => editor.chain().focus().toggleUnderline().run()}
-        colorScheme={editor.isActive('underline') ? 'blue' : 'gray'}
-        variant="ghost"
-      />
-      <IconButton
-        size="xs"
-        icon={<Icon as={MdFormatItalic} boxSize={4} />}
-        aria-label="Italic"
+      >
+        <Icon as={RiUnderline} boxSize="18px" />
+      </Square>
+      <Square
+        rounded="base"
+        p="2px"
+        _hover={{ bg: 'blue.100', cursor: 'pointer' }}
+        color={editor.isActive('italic') ? 'blue.500' : 'inherit'}
         onClick={() => editor.chain().focus().toggleItalic().run()}
-        colorScheme={editor.isActive('italic') ? 'blue' : 'gray'}
-        variant="ghost"
-      />
+      >
+        <Icon as={RiItalic} boxSize="18px" />
+      </Square>
     </HStack>
   );
 };
