@@ -2,6 +2,7 @@ import { Box } from '@chakra-ui/react';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKitExt from '@tiptap/starter-kit';
 import UnderlineExt from '@tiptap/extension-underline';
+import Placeholder from '@tiptap/extension-placeholder';
 
 import { BubbleMenuBox } from './menus';
 
@@ -11,12 +12,23 @@ import { CommandMenuExt, CommandSuggestion } from './extensions';
 
 type Props = {
   hasToolbar?: boolean;
+  placeholderText?: string;
 };
-export const WebEditor = ({ hasToolbar = true }: Props) => {
+export const WebEditor = ({ hasToolbar = true, placeholderText }: Props) => {
   const editor = useEditor({
     extensions: [
       StarterKitExt,
       UnderlineExt.configure(),
+      Placeholder.configure({
+        placeholder: ({ node }) => {
+          console.log(placeholderText);
+          if (node.type.name === 'paragraph') {
+            return placeholderText || `Type '/' for commands`;
+          }
+
+          return placeholderText || 'Write content...';
+        },
+      }),
       CommandMenuExt.configure({
         suggestion: CommandSuggestion,
       }),
