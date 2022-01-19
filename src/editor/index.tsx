@@ -40,7 +40,7 @@ export const WebEditor = ({ hasToolbar = true, placeholderText }: Props) => {
     <Box borderWidth={1} rounded="base">
       {editor && !hasToolbar && <BubbleMenuBox editor={editor} />}
       {editor && hasToolbar && <FixedMenuBox editor={editor} />}
-      <Box px={2} py={1}>
+      <Box px={4} py={2}>
         <EditorContent editor={editor} className={styles['custom-editor']} />
       </Box>
     </Box>
