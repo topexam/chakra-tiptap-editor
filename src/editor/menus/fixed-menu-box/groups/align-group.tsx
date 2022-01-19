@@ -58,6 +58,7 @@ export const AlignGroup = ({ editor }: Props) => {
 
       return (
         <MenuItem
+          key={it.key}
           icon={<Icon as={it.icon} display="block" />}
           onClick={() => _handleSetAlign(it.key)}
           bg={isActive ? 'blue.100' : 'inherit'}

@@ -81,6 +81,7 @@ export const HeadingGroup = ({ editor }: Props) => {
 
       return (
         <MenuItem
+          key={it.level}
           icon={<Icon as={it.icon} display="block" />}
           onClick={() => _handleToggleHeading(it.level)}
           bg={isActive ? 'blue.100' : 'inherit'}

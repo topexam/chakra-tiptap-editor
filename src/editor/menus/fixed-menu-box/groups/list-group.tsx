@@ -62,6 +62,7 @@ export const ListGroup = ({ editor }: Props) => {
 
       return (
         <MenuItem
+          key={it.key}
           icon={<Icon as={it.icon} display="block" />}
           onClick={() => _handleSetList(it.key)}
           bg={isActive ? 'blue.100' : 'inherit'}
