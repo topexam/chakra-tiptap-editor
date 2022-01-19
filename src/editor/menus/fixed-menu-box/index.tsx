@@ -3,6 +3,7 @@ import { Editor } from '@tiptap/react';
 
 import {
   AlignGroup,
+  BlockGroup,
   DividerGroup,
   HeadingGroup,
   ListGroup,
@@ -22,6 +23,8 @@ export const FixedMenuBox = ({ editor }: Props) => {
       <AlignGroup editor={editor} />
       <DividerGroup />
       <ListGroup editor={editor} />
+      <DividerGroup />
+      <BlockGroup editor={editor} />
     </HStack>
   );
 };

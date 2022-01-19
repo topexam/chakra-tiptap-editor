@@ -23,44 +23,43 @@ import {
 
 type IHeadingLevel = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 
-const HEADING_LIST: { level: IHeadingLevel; title: string; icon: IconType }[] =
-  [
-    {
-      level: 0,
-      icon: RiParagraph,
-      title: 'Paragraph',
-    },
-    {
-      level: 1,
-      icon: RiH1,
-      title: 'Heading 1',
-    },
-    {
-      level: 2,
-      icon: RiH2,
-      title: 'Heading 2',
-    },
-    {
-      level: 3,
-      icon: RiH3,
-      title: 'Heading 3',
-    },
-    {
-      level: 4,
-      icon: RiH4,
-      title: 'Heading 4',
-    },
-    {
-      level: 5,
-      icon: RiH5,
-      title: 'Heading 5',
-    },
-    {
-      level: 6,
-      icon: RiH6,
-      title: 'Heading 6',
-    },
-  ];
+const DATA_LIST: { level: IHeadingLevel; title: string; icon: IconType }[] = [
+  {
+    level: 0,
+    icon: RiParagraph,
+    title: 'Paragraph',
+  },
+  {
+    level: 1,
+    icon: RiH1,
+    title: 'Heading 1',
+  },
+  {
+    level: 2,
+    icon: RiH2,
+    title: 'Heading 2',
+  },
+  {
+    level: 3,
+    icon: RiH3,
+    title: 'Heading 3',
+  },
+  {
+    level: 4,
+    icon: RiH4,
+    title: 'Heading 4',
+  },
+  {
+    level: 5,
+    icon: RiH5,
+    title: 'Heading 5',
+  },
+  {
+    level: 6,
+    icon: RiH6,
+    title: 'Heading 6',
+  },
+];
 
 type Props = {
   editor: Editor;
@@ -74,7 +73,7 @@ export const HeadingGroup = ({ editor }: Props) => {
   };
 
   const _renderHeadingList = () => {
-    return HEADING_LIST.map((it) => {
+    return DATA_LIST.map((it) => {
       const isActive = it.level
         ? editor.isActive('heading', { level: it.level })
         : editor.isActive('paragraph');
@@ -93,10 +92,11 @@ export const HeadingGroup = ({ editor }: Props) => {
     });
   };
 
-  const activeItem = HEADING_LIST.find((it) => {
-    if (!it.level) return editor.isActive('paragraph');
-    return editor.isActive('heading', { level: it.level });
-  });
+  const activeItem =
+    DATA_LIST.find((it) => {
+      if (!it.level) return editor.isActive('paragraph');
+      return editor.isActive('heading', { level: it.level });
+    }) || DATA_LIST[0];
 
   return (
     <Menu isLazy>
@@ -110,7 +110,7 @@ export const HeadingGroup = ({ editor }: Props) => {
             _hover={{ bg: 'blue.100' }}
           >
             <HStack>
-              <Text>{activeItem?.title}</Text>
+              <Text>{activeItem?.title || 'Heading'}</Text>
               <Icon as={isOpen ? RiArrowUpSLine : RiArrowDownSLine} />
             </HStack>
           </MenuButton>

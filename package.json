@@ -84,6 +84,7 @@
     "typescript": "^4.5.4"
   },
   "dependencies": {
+    "@tiptap/extension-code-block-lowlight": "^2.0.0-beta.65",
     "@tiptap/extension-highlight": "^2.0.0-beta.32",
     "@tiptap/extension-placeholder": "^2.0.0-beta.46",
     "@tiptap/extension-subscript": "^2.0.0-beta.10",

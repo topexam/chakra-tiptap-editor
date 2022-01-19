@@ -9,6 +9,9 @@ import SuperscriptExt from '@tiptap/extension-superscript';
 import TextAlignExt from '@tiptap/extension-text-align';
 import TaskListExt from '@tiptap/extension-task-list';
 import TaskItemExt from '@tiptap/extension-task-item';
+import CodeBlockLowlightExt from '@tiptap/extension-code-block-lowlight';
+
+import lowlight from 'lowlight';
 
 import { BubbleMenuBox, FixedMenuBox } from './menus';
 import { CommandMenuExt, CommandSuggestion } from './extensions';
@@ -29,6 +32,9 @@ export const WebEditor = ({ hasToolbar = true, placeholderText }: Props) => {
       SubscriptExt,
       SuperscriptExt,
       TaskListExt,
+      CodeBlockLowlightExt.configure({
+        lowlight,
+      }),
       TaskItemExt.configure({
         nested: true,
       }),

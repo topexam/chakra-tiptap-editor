@@ -1,11 +1,11 @@
-import { HStack, Icon, Square } from '@chakra-ui/react';
+import { HStack } from '@chakra-ui/react';
 import { Editor } from '@tiptap/react';
 import {
   RiBold,
   RiUnderline,
   RiItalic,
   RiStrikethrough,
-  RiFontColor,
+  RiTBoxFill,
   RiSubscript,
   RiSuperscript,
 } from 'react-icons/ri';
@@ -39,7 +39,7 @@ export const MarkGroup = ({ editor }: Props) => {
         onClick={() => editor.chain().focus().toggleStrike().run()}
       />
       <MenuButton
-        iconType={RiFontColor}
+        iconType={RiTBoxFill}
         isActive={editor.isActive('highlight')}
         onClick={() => editor.chain().focus().toggleHighlight().run()}
       />

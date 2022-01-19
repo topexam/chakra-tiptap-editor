@@ -19,7 +19,7 @@ import {
 
 type IAlignKey = 'left' | 'center' | 'right' | 'justify';
 
-const ALIGN_LIST: { key: IAlignKey; title: string; icon: IconType }[] = [
+const DATA_LIST: { key: IAlignKey; title: string; icon: IconType }[] = [
   {
     key: 'left',
     icon: RiAlignLeft,
@@ -53,7 +53,7 @@ export const AlignGroup = ({ editor }: Props) => {
   };
 
   const _renderHeadingList = () => {
-    return ALIGN_LIST.map((it) => {
+    return DATA_LIST.map((it) => {
       const isActive = editor.isActive({ textAlign: it.key });
 
       return (
@@ -70,9 +70,10 @@ export const AlignGroup = ({ editor }: Props) => {
     });
   };
 
-  const activeItem = ALIGN_LIST.find((it) => {
-    return editor.isActive({ textAlign: it.key });
-  });
+  const activeItem =
+    DATA_LIST.find((it) => {
+      return editor.isActive({ textAlign: it.key });
+    }) || DATA_LIST[0];
 
   return (
     <Menu isLazy>
