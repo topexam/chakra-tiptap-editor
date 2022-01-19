@@ -101,8 +101,14 @@ export const HeadingGroup = ({ editor }: Props) => {
     <Menu>
       {({ isOpen }) => (
         <>
-          <MenuButton>
-            <HStack borderWidth={1} bg="white" px={2} rounded="base">
+          <MenuButton
+            borderWidth={1}
+            bg="white"
+            px={2}
+            rounded="base"
+            _hover={{ bg: 'blue.100' }}
+          >
+            <HStack>
               <Text>{activeItem?.title}</Text>
               <Icon as={isOpen ? RiArrowUpSLine : RiArrowDownSLine} />
             </HStack>

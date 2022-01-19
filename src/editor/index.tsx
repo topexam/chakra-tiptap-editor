@@ -6,6 +6,7 @@ import PlaceholderExt from '@tiptap/extension-placeholder';
 import HighlightExt from '@tiptap/extension-highlight';
 import SubscriptExt from '@tiptap/extension-subscript';
 import SuperscriptExt from '@tiptap/extension-superscript';
+import TextAlignExt from '@tiptap/extension-text-align';
 
 import { BubbleMenuBox } from './menus';
 
@@ -26,6 +27,9 @@ export const WebEditor = ({ hasToolbar = true, placeholderText }: Props) => {
       HighlightExt,
       SubscriptExt,
       SuperscriptExt,
+      TextAlignExt.configure({
+        types: ['heading', 'paragraph'],
+      }),
       PlaceholderExt.configure({
         placeholder: ({ node }) => {
           if (node.type.name === 'paragraph')

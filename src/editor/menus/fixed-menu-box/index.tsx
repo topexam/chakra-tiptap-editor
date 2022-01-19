@@ -1,7 +1,7 @@
-import { Box, HStack } from '@chakra-ui/react';
+import { HStack } from '@chakra-ui/react';
 import { Editor } from '@tiptap/react';
 
-import { DividerGroup, HeadingGroup, MarkGroup } from './groups';
+import { AlignGroup, DividerGroup, HeadingGroup, MarkGroup } from './groups';
 
 type Props = {
   editor: Editor;
@@ -13,6 +13,7 @@ export const FixedMenuBox = ({ editor }: Props) => {
       <HeadingGroup editor={editor} />
       <MarkGroup editor={editor} />
       <DividerGroup />
+      <AlignGroup editor={editor} />
     </HStack>
   );
 };
