@@ -14,6 +14,7 @@ type Props = {
   hasToolbar?: boolean;
   placeholderText?: string;
 };
+
 export const WebEditor = ({ hasToolbar = true, placeholderText }: Props) => {
   const editor = useEditor({
     extensions: [
@@ -21,11 +22,8 @@ export const WebEditor = ({ hasToolbar = true, placeholderText }: Props) => {
       UnderlineExt.configure(),
       Placeholder.configure({
         placeholder: ({ node }) => {
-          console.log(placeholderText);
-          if (node.type.name === 'paragraph') {
+          if (node.type.name === 'paragraph')
             return placeholderText || `Type '/' for commands`;
-          }
-
           return placeholderText || 'Write content...';
         },
       }),
