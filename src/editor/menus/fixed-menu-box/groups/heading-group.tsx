@@ -18,7 +18,7 @@ import {
   RiH4,
   RiH5,
   RiH6,
-  RiMenu2Fill,
+  RiParagraph,
 } from 'react-icons/ri';
 
 type IHeadingLevel = 0 | 1 | 2 | 3 | 4 | 5 | 6;
@@ -27,7 +27,7 @@ const HEADING_LIST: { level: IHeadingLevel; title: string; icon: IconType }[] =
   [
     {
       level: 0,
-      icon: RiMenu2Fill,
+      icon: RiParagraph,
       title: 'Paragraph',
     },
     {

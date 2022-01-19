@@ -2,7 +2,10 @@ import { Box } from '@chakra-ui/react';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKitExt from '@tiptap/starter-kit';
 import UnderlineExt from '@tiptap/extension-underline';
-import Placeholder from '@tiptap/extension-placeholder';
+import PlaceholderExt from '@tiptap/extension-placeholder';
+import HighlightExt from '@tiptap/extension-highlight';
+import SubscriptExt from '@tiptap/extension-subscript';
+import SuperscriptExt from '@tiptap/extension-superscript';
 
 import { BubbleMenuBox } from './menus';
 
@@ -19,8 +22,11 @@ export const WebEditor = ({ hasToolbar = true, placeholderText }: Props) => {
   const editor = useEditor({
     extensions: [
       StarterKitExt,
-      UnderlineExt.configure(),
-      Placeholder.configure({
+      UnderlineExt,
+      HighlightExt,
+      SubscriptExt,
+      SuperscriptExt,
+      PlaceholderExt.configure({
         placeholder: ({ node }) => {
           if (node.type.name === 'paragraph')
             return placeholderText || `Type '/' for commands`;

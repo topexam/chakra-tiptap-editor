@@ -3471,6 +3471,11 @@
   resolved "https://registry.yarnpkg.com/@tiptap/extension-heading/-/extension-heading-2.0.0-beta.25.tgz#80d88cd0269e824b6b2e3e4dcd60280aff83c906"
   integrity sha512-7cK2gB3eqb7U0KmpWIPT7tsHGuVeFk4q1q/V6q91NTtZ4HdOMAyFuYTZu1iXufKyoEXTftByE85EYsfJGeGiRQ==
 
+"@tiptap/extension-highlight@^2.0.0-beta.32":
+  version "2.0.0-beta.32"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-highlight/-/extension-highlight-2.0.0-beta.32.tgz#444af602cdb15effc2648aa27c0a4f39aca0c0e3"
+  integrity sha512-fl/w+6QgE3OcLlW3fkO7wE9c0E9VX4AueBBHRYIYv7k4AzBDSoIEA7XVFa8jJFIMzmxrFGnPd5OEDRo7ezWq6A==
+
 "@tiptap/extension-history@^2.0.0-beta.21":
   version "2.0.0-beta.21"
   resolved "https://registry.yarnpkg.com/@tiptap/extension-history/-/extension-history-2.0.0-beta.21.tgz#5d96a17a83a7130744f0757a3275dd5b11eb1bf7"
@@ -3519,6 +3524,16 @@
   version "2.0.0-beta.27"
   resolved "https://registry.yarnpkg.com/@tiptap/extension-strike/-/extension-strike-2.0.0-beta.27.tgz#c5187bf3c28837f95a5c0c0617d0dd31c318353d"
   integrity sha512-2dmCgtesuDdivM/54Q+Y6Tc3JbGz1SkHP6c62piuqBiYLWg3xa16zChZOhfN8szbbQlBgLT6XRTDt3c2Ux+Dug==
+
+"@tiptap/extension-subscript@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-subscript/-/extension-subscript-2.0.0-beta.10.tgz#177e9501f805d3cdcb359411b80b54dc7d77373e"
+  integrity sha512-er8/1lp0Rb+SKwEioW0w4oVf3EkdQZ0WS/5kPBG4W0DncfUMT+bw5de76S3kRL9PLZ9UShAL7wuXtuiSi5QsMw==
+
+"@tiptap/extension-superscript@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-superscript/-/extension-superscript-2.0.0-beta.10.tgz#f91c19c2d30aabe3f8c21e87f8e5e8b2e6a55893"
+  integrity sha512-TUUBS8XsD2MorGORYVlhGDH7wcc9diSbHscD4Dnz8pKWVR0JPUd/od4h5qSffDzAOKxtphTiX9LOFWk6zVooKg==
 
 "@tiptap/extension-text@^2.0.0-beta.15":
   version "2.0.0-beta.15"
@@ -13537,6 +13552,10 @@ test-exclude@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/test-exclude/-/test-exclude-6.0.0.tgz#04a8698661d805ea6fa293b6cb9e63ac044ef15e"
   integrity sha512-cAGWPIyOHU6zlmg88jwm7VRyXnMN7iV68OGAbYDk/Mh/xC/pzVPlQtY6ngoIH/5/tciuhGfvESU8GrHrcxD56w==
+  dependencies:
+    "@istanbuljs/schema" "^0.1.2"
+    glob "^7.1.4"
+    minimatch "^3.0.4"
 
 text-table@^0.2.0:
   version "0.2.0"
