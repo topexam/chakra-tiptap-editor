@@ -2,6 +2,7 @@ import { HStack, Icon, Square } from '@chakra-ui/react';
 import { Editor } from '@tiptap/react';
 
 import { RiBold, RiItalic, RiUnderline } from 'react-icons/ri';
+import { HeadingGroup } from './groups';
 
 type Props = {
   editor: Editor;
@@ -9,7 +10,8 @@ type Props = {
 
 export const FixedMenuBox = ({ editor }: Props) => {
   return (
-    <HStack px={2} py={1} bg="gray.50" roundedTop="base">
+    <HStack px={2} py={2} bg="gray.50" roundedTop="base">
+      <HeadingGroup editor={editor} />
       <Square
         rounded="base"
         p="2px"
