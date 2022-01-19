@@ -81,7 +81,7 @@ export const HeadingGroup = ({ editor }: Props) => {
 
       return (
         <MenuItem
-          icon={<Icon as={it.icon} boxSize={4} display="block" />}
+          icon={<Icon as={it.icon} display="block" />}
           onClick={() => _handleToggleHeading(it.level)}
           bg={isActive ? 'blue.100' : 'inherit'}
           color={isActive ? 'blue.500' : 'inherit'}
@@ -98,7 +98,7 @@ export const HeadingGroup = ({ editor }: Props) => {
   });
 
   return (
-    <Menu>
+    <Menu isLazy>
       {({ isOpen }) => (
         <>
           <MenuButton

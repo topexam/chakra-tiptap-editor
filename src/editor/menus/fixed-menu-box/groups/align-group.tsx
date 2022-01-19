@@ -58,7 +58,7 @@ export const AlignGroup = ({ editor }: Props) => {
 
       return (
         <MenuItem
-          icon={<Icon as={it.icon} boxSize={4} display="block" />}
+          icon={<Icon as={it.icon} display="block" />}
           onClick={() => _handleSetAlign(it.key)}
           bg={isActive ? 'blue.100' : 'inherit'}
           color={isActive ? 'blue.500' : 'inherit'}
@@ -74,7 +74,7 @@ export const AlignGroup = ({ editor }: Props) => {
   });
 
   return (
-    <Menu>
+    <Menu isLazy>
       {({ isOpen }) => (
         <>
           <MenuButton _hover={{ bg: 'blue.100' }} p={1} rounded="base">

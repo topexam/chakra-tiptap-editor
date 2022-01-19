@@ -7,12 +7,13 @@ import HighlightExt from '@tiptap/extension-highlight';
 import SubscriptExt from '@tiptap/extension-subscript';
 import SuperscriptExt from '@tiptap/extension-superscript';
 import TextAlignExt from '@tiptap/extension-text-align';
+import TaskListExt from '@tiptap/extension-task-list';
+import TaskItemExt from '@tiptap/extension-task-item';
 
-import { BubbleMenuBox } from './menus';
+import { BubbleMenuBox, FixedMenuBox } from './menus';
+import { CommandMenuExt, CommandSuggestion } from './extensions';
 
 import styles from './index.module.scss';
-import { FixedMenuBox } from './menus/fixed-menu-box';
-import { CommandMenuExt, CommandSuggestion } from './extensions';
 
 type Props = {
   hasToolbar?: boolean;
@@ -27,6 +28,10 @@ export const WebEditor = ({ hasToolbar = true, placeholderText }: Props) => {
       HighlightExt,
       SubscriptExt,
       SuperscriptExt,
+      TaskListExt,
+      TaskItemExt.configure({
+        nested: true,
+      }),
       TextAlignExt.configure({
         types: ['heading', 'paragraph'],
       }),

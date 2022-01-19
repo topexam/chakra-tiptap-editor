@@ -3535,6 +3535,16 @@
   resolved "https://registry.yarnpkg.com/@tiptap/extension-superscript/-/extension-superscript-2.0.0-beta.10.tgz#f91c19c2d30aabe3f8c21e87f8e5e8b2e6a55893"
   integrity sha512-TUUBS8XsD2MorGORYVlhGDH7wcc9diSbHscD4Dnz8pKWVR0JPUd/od4h5qSffDzAOKxtphTiX9LOFWk6zVooKg==
 
+"@tiptap/extension-task-item@^2.0.0-beta.30":
+  version "2.0.0-beta.30"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-task-item/-/extension-task-item-2.0.0-beta.30.tgz#54c97d2dd84e0ff40689e02f7361dbd903a40161"
+  integrity sha512-56hS7vP/Hgv5R6otEPInTnd8z5n6UCBFm4sbMPA8d7yWWJDskkfuMp9YDEu2zgHZtTghPyGkw3wO6yxouGWlkg==
+
+"@tiptap/extension-task-list@^2.0.0-beta.26":
+  version "2.0.0-beta.26"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-task-list/-/extension-task-list-2.0.0-beta.26.tgz#75a20795429c40c3b12544483ea63014487d71c7"
+  integrity sha512-7zPpz9eOUCnFyWNDFYPCUJ39gjID+mCI5BuXyXrjJjDfm8wxg/xTgg9+KC6xakczos7DypnhzlRKSs4EFczeUg==
+
 "@tiptap/extension-text-align@^2.0.0-beta.29":
   version "2.0.0-beta.29"
   resolved "https://registry.yarnpkg.com/@tiptap/extension-text-align/-/extension-text-align-2.0.0-beta.29.tgz#31df3d23e7c66caf401a1850a80b88f5cedab0a8"
