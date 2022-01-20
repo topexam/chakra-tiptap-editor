@@ -2,6 +2,7 @@ import { HStack } from '@chakra-ui/react';
 import { Editor } from '@tiptap/react';
 
 import {
+  AddMoreGroup,
   AlignGroup,
   BlockGroup,
   DividerGroup,
@@ -19,6 +20,8 @@ type Props = {
 export const FixedMenuBox = ({ editor }: Props) => {
   return (
     <HStack px={2} py={2} bg="gray.50" roundedTop="base">
+      <AddMoreGroup editor={editor} />
+      <DividerGroup />
       <HistoryGroup editor={editor} />
       <DividerGroup />
       <HeadingGroup editor={editor} />

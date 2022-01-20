@@ -5,7 +5,7 @@ type Props = {
   iconType: IconType;
   isActive?: boolean;
   isDisabled?: boolean;
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 const generateState = (isActive: boolean, isDisabled: boolean) => {
@@ -27,7 +27,7 @@ export const MenuButton = ({
       p="2px"
       color={color}
       _hover={{ bg: bgColor, cursor }}
-      onClick={() => !isDisabled && onClick()}
+      onClick={() => !isDisabled && onClick?.()}
     >
       <Icon as={iconType} boxSize="18px" />
     </Square>

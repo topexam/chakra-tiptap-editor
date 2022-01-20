@@ -5,4 +5,5 @@ export * from './align-group';
 export * from './list-group';
 export * from './block-group';
 export * from './history-group';
-export * from './other-group'
+export * from './other-group';
+export * from './add-more-group';
