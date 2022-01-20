@@ -9,6 +9,7 @@ import {
   HistoryGroup,
   ListGroup,
   MarkGroup,
+  OtherGroup,
 } from './groups';
 
 type Props = {
@@ -28,6 +29,8 @@ export const FixedMenuBox = ({ editor }: Props) => {
       <ListGroup editor={editor} />
       <DividerGroup />
       <BlockGroup editor={editor} />
+      <DividerGroup />
+      <OtherGroup editor={editor} />
     </HStack>
   );
 };
