@@ -9,7 +9,7 @@ type Props = {
 
 export const HistoryGroup = ({ editor }: Props) => {
   return (
-    <HStack>
+    <>
       <MenuButton
         iconType={MdUndo}
         isActive={editor.can().undo()}
@@ -22,6 +22,6 @@ export const HistoryGroup = ({ editor }: Props) => {
         onClick={() => editor.chain().focus().redo().run()}
         isDisabled={!editor.can().redo()}
       />
-    </HStack>
+    </>
   );
 };

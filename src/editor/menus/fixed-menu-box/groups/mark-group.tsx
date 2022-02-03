@@ -17,7 +17,7 @@ type Props = {
 
 export const MarkGroup = ({ editor }: Props) => {
   return (
-    <HStack>
+    <>
       <MenuButton
         iconType={RiBold}
         isActive={editor.isActive('bold')}
@@ -53,6 +53,6 @@ export const MarkGroup = ({ editor }: Props) => {
         isActive={editor.isActive('superscript')}
         onClick={() => editor.chain().focus().toggleSuperscript().run()}
       />
-    </HStack>
+    </>
   );
 };

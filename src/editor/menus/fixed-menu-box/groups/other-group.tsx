@@ -9,12 +9,12 @@ type Props = {
 
 export const OtherGroup = ({ editor }: Props) => {
   return (
-    <HStack>
+    <>
       <MenuButton
         iconType={RiFormatClear}
         onClick={() => editor.chain().focus().unsetAllMarks().run()}
       />
       <MenuButton iconType={RiFullscreenFill} onClick={() => {}} />
-    </HStack>
+    </>
   );
 };

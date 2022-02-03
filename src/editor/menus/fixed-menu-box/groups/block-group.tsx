@@ -9,7 +9,7 @@ type Props = {
 
 export const BlockGroup = ({ editor }: Props) => {
   return (
-    <HStack>
+    <HStack flexWrap="wrap">
       <MenuButton
         iconType={RiDoubleQuotesL}
         isActive={editor.isActive('blockquote')}
