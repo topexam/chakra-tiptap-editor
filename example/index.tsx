@@ -8,10 +8,10 @@ const App = () => {
   return (
     <ChakraProvider>
       <Box m={20}>
-        <WebEditor placeholderText="This is placeholder" />
+        <WebEditor />
       </Box>
       <Box m={20}>
-        <WebEditor hasToolbar={false} placeholderText="This is placeholder" />
+        <WebEditor hasToolbar={false} />
       </Box>
     </ChakraProvider>
   );

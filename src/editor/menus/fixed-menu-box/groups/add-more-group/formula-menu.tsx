@@ -29,6 +29,7 @@ const FormulaMenu = ({ triggerButton }: Props) => {
       onClose={onClose}
       placement="right-start"
       closeOnBlur={false}
+      trigger="hover"
     >
       <PopoverTrigger>{triggerElement}</PopoverTrigger>
       <PopoverContent>
