@@ -1,7 +1,6 @@
 import { HStack, Icon, Square } from '@chakra-ui/react';
 import { Editor, BubbleMenu } from '@tiptap/react';
 import { RiBold, RiItalic, RiUnderline } from 'react-icons/ri';
-import { HeadingGroup } from '../fixed-menu-box/groups';
 
 type Props = {
   editor: Editor;

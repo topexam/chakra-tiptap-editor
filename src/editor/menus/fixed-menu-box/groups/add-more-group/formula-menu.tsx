@@ -30,6 +30,7 @@ const FormulaMenu = ({ triggerButton }: Props) => {
       placement="right-start"
       closeOnBlur={false}
       trigger="hover"
+      isLazy
     >
       <PopoverTrigger>{triggerElement}</PopoverTrigger>
       <PopoverContent>

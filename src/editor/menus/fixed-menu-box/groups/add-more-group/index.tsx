@@ -34,7 +34,7 @@ type Props = {
 export const AddMoreGroup = ({ editor }: Props) => {
   return (
     <HStack>
-      <Menu closeOnSelect={false}>
+      <Menu closeOnSelect={false} isLazy>
         {({ isOpen }) => (
           <>
             <MenuButton

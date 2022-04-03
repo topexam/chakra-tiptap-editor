@@ -10,20 +10,26 @@ import TextAlignExt from '@tiptap/extension-text-align';
 import TaskListExt from '@tiptap/extension-task-list';
 import TaskItemExt from '@tiptap/extension-task-item';
 import CodeBlockLowlightExt from '@tiptap/extension-code-block-lowlight';
-
 import lowlight from 'lowlight';
 
 import { BubbleMenuBox, FixedMenuBox } from './menus';
 import { CommandMenuExt, CommandSuggestion } from './extensions';
-
+import { IEditorValue } from './types';
 import styles from './index.module.scss';
 
 type Props = {
   hasToolbar?: boolean;
   placeholderText?: string;
+  value: IEditorValue;
+  onChange: (value: IEditorValue) => void;
 };
 
-export const WebEditor = ({ hasToolbar = true, placeholderText }: Props) => {
+export const WebEditor = ({
+  hasToolbar = true,
+  placeholderText,
+  value,
+  onChange,
+}: Props) => {
   const editor = useEditor({
     extensions: [
       StarterKitExt,
@@ -32,15 +38,9 @@ export const WebEditor = ({ hasToolbar = true, placeholderText }: Props) => {
       SubscriptExt,
       SuperscriptExt,
       TaskListExt,
-      CodeBlockLowlightExt.configure({
-        lowlight,
-      }),
-      TaskItemExt.configure({
-        nested: true,
-      }),
-      TextAlignExt.configure({
-        types: ['heading', 'paragraph'],
-      }),
+      CodeBlockLowlightExt.configure({ lowlight }),
+      TaskItemExt.configure({ nested: true }),
+      TextAlignExt.configure({ types: ['heading', 'paragraph'] }),
       PlaceholderExt.configure({
         placeholder: ({ node }) => {
           if (node.type.name === 'paragraph')
@@ -48,15 +48,18 @@ export const WebEditor = ({ hasToolbar = true, placeholderText }: Props) => {
           return placeholderText || 'Write content...';
         },
       }),
-      CommandMenuExt.configure({
-        suggestion: CommandSuggestion,
-      }),
+      CommandMenuExt.configure({ suggestion: CommandSuggestion }),
     ],
-    content: '<p>Hello World!</p>',
+    content: value.raw || value.html,
+    onUpdate({ editor }) {
+      const htmlValue = editor.getHTML();
+      const rawValue = editor.getJSON();
+      onChange({ raw: rawValue, html: htmlValue });
+    },
   });
 
   return (
-    <Box borderWidth={1} rounded="base">
+    <Box borderWidth={1} rounded="base" bg="white">
       {editor && !hasToolbar && <BubbleMenuBox editor={editor} />}
       {editor && hasToolbar && <FixedMenuBox editor={editor} />}
       <Box px={4} py={2}>
