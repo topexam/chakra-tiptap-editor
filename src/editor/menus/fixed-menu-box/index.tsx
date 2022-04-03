@@ -19,7 +19,7 @@ type Props = {
 
 export const FixedMenuBox = ({ editor }: Props) => {
   return (
-    <HStack px={2} py={2} bg="gray.50" roundedTop="base" flexWrap="wrap">
+    <HStack px={2} py={2} bg="gray.100" roundedTop="base" flexWrap="wrap">
       <AddMoreGroup editor={editor} />
       <DividerGroup />
       <HistoryGroup editor={editor} />

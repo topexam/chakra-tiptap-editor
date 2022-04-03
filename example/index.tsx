@@ -7,11 +7,13 @@ import { WebEditor } from '../.';
 const App = () => {
   return (
     <ChakraProvider>
-      <Box m={20}>
-        <WebEditor />
-      </Box>
-      <Box m={20}>
-        <WebEditor hasToolbar={false} />
+      <Box p={10} bg="gray.50">
+        <Box m={20}>
+          <WebEditor />
+        </Box>
+        <Box m={20}>
+          <WebEditor hasToolbar={false} />
+        </Box>
       </Box>
     </ChakraProvider>
   );
