@@ -1,13 +1,19 @@
 import 'react-app-polyfill/ie11';
-import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Thing } from '../.';
+import { Box, ChakraProvider } from '@chakra-ui/react';
+
+import { WebEditor } from '../.';
 
 const App = () => {
   return (
-    <div>
-      <Thing />
-    </div>
+    <ChakraProvider>
+      <Box m={20}>
+        <WebEditor />
+      </Box>
+      <Box m={20}>
+        <WebEditor hasToolbar={false} />
+      </Box>
+    </ChakraProvider>
   );
 };
 
