@@ -32,6 +32,7 @@ const ImageMenu = ({ triggerButton }: Props) => {
       placement="right-start"
       trigger="hover"
       closeOnBlur={false}
+      isLazy
     >
       <PopoverTrigger>{triggerElement}</PopoverTrigger>
       <PopoverContent>

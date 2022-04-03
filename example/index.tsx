@@ -9,10 +9,17 @@ const App = () => {
     <ChakraProvider>
       <Box p={10} bg="gray.50">
         <Box m={20}>
-          <WebEditor />
+          <WebEditor
+            value={{ html: '<p>Hello</p>' }}
+            onChange={(value) => console.log(value)}
+          />
         </Box>
         <Box m={20}>
-          <WebEditor hasToolbar={false} />
+          <WebEditor
+            hasToolbar={false}
+            value={{ html: '<p>Hello</p>' }}
+            onChange={(value) => console.log(value)}
+          />
         </Box>
       </Box>
     </ChakraProvider>

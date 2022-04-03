@@ -110,6 +110,7 @@ export const HeadingGroup = ({ editor }: Props) => {
             _hover={{ bg: 'blue.100' }}
           >
             <HStack>
+              <Icon as={activeItem.icon} />
               <Text>{activeItem?.title || 'Heading'}</Text>
               <Icon as={isOpen ? RiArrowUpSLine : RiArrowDownSLine} />
             </HStack>
