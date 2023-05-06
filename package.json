@@ -1,14 +1,24 @@
 {
-  "name": "react-web-editor",
+  "name": "chakra-tiptap-editor",
   "version": "0.0.0",
   "license": "MIT",
   "author": "An Nguyen Q. <ngquangan.dev@gmail.com>",
   "main": "dist/index.js",
-  "module": "dist/react-web-editor.esm.js",
+  "module": "dist/chakra-tiptap-editor.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/topthithu/chakra-tiptap-editor"
+  },
+  "homepage": "https://github.com/topthithu/chakra-tiptap-editor",
+  "keywords": [
+    "react",
+    "container query",
+    "react container query",
+    "grid system"
   ],
   "scripts": {
     "analyze": "size-limit --why",
@@ -43,11 +53,11 @@
   },
   "size-limit": [
     {
-      "path": "dist/react-web-editor.cjs.production.min.js",
+      "path": "dist/chakra-tiptap-editor.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/react-web-editor.esm.js",
+      "path": "dist/chakra-tiptap-editor.esm.js",
       "limit": "10 KB"
     }
   ],
@@ -95,5 +105,9 @@
     "@tiptap/react": "^2.0.0-beta.107",
     "@tiptap/starter-kit": "^2.0.0-beta.181",
     "@tiptap/suggestion": "^2.0.0-beta.90"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }

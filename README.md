@@ -1,1 +1,1 @@
-# react-web-editor
+# chakra-tiptap-editor
