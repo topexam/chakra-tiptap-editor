@@ -16,9 +16,10 @@
   "homepage": "https://github.com/topthithu/chakra-tiptap-editor",
   "keywords": [
     "react",
-    "container query",
-    "react container query",
-    "grid system"
+    "tiptap editor",
+    "react editor",
+    "editor",
+    "chakra-ui editor"
   ],
   "scripts": {
     "analyze": "size-limit --why",
