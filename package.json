@@ -1,6 +1,6 @@
 {
   "name": "chakra-tiptap-editor",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "author": "An Nguyen Q. <ngquangan.dev@gmail.com>",
   "main": "dist/index.js",
