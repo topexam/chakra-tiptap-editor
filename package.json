@@ -62,6 +62,8 @@
     "@commitlint/config-conventional": "^19.1.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@size-limit/esbuild": "^11.1.2",
+    "@size-limit/esbuild-why": "^11.1.2",
     "@size-limit/preset-small-lib": "^11.1.2",
     "@storybook/addon-essentials": "^8.0.6",
     "@storybook/addon-info": "^5.3.21",
