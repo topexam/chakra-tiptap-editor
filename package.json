@@ -27,12 +27,12 @@
   "scripts": {
     "analyze": "size-limit --why",
     "build": "dts build",
-    "build-storybook": "build-storybook",
+    "build-storybook": "storybook build",
     "lint": "dts lint",
     "prepare": "dts build",
     "size": "size-limit",
     "start": "dts watch",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "storybook dev -p 6006",
     "test": "dts test --passWithNoTests"
   },
   "jest": {
@@ -66,10 +66,10 @@
     "@size-limit/esbuild-why": "^11.1.2",
     "@size-limit/preset-small-lib": "^11.1.2",
     "@storybook/addon-essentials": "^8.0.6",
-    "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-links": "^8.0.6",
-    "@storybook/addons": "^7.6.17",
+    "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
     "@storybook/react": "^8.0.6",
+    "@storybook/react-webpack5": "^8.0.6",
     "@tsconfig/create-react-app": "^2.0.4",
     "@tsconfig/recommended": "^1.0.6",
     "@types/react": "^18.2.74",
@@ -88,6 +88,7 @@
     "react-is": "^18.2.0",
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.74.1",
+    "storybook": "^8.0.6",
     "tslib": "^2.6.2",
     "typescript": "^5.1.6"
   },
@@ -101,6 +102,7 @@
     "@tiptap/extension-task-list": "^2.2.6",
     "@tiptap/extension-text-align": "^2.2.6",
     "@tiptap/extension-underline": "^2.2.6",
+    "@tiptap/pm": "^2.2.6",
     "@tiptap/react": "^2.2.6",
     "@tiptap/starter-kit": "^2.2.6",
     "@tiptap/suggestion": "^2.2.6",

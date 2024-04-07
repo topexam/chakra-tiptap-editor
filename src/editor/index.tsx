@@ -10,7 +10,7 @@ import TextAlignExt from '@tiptap/extension-text-align';
 import TaskListExt from '@tiptap/extension-task-list';
 import TaskItemExt from '@tiptap/extension-task-item';
 import CodeBlockLowlightExt from '@tiptap/extension-code-block-lowlight';
-import lowlight from 'lowlight';
+import { common, createLowlight } from 'lowlight';
 
 import { BubbleMenuBox, FixedMenuBox } from './menus';
 import { CommandMenuExt, CommandSuggestion } from './extensions';
@@ -38,7 +38,7 @@ export const WebEditor = ({
       SubscriptExt,
       SuperscriptExt,
       TaskListExt,
-      CodeBlockLowlightExt.configure({ lowlight }),
+      CodeBlockLowlightExt.configure({ lowlight: createLowlight(common) }),
       TaskItemExt.configure({ nested: true }),
       TextAlignExt.configure({ types: ['heading', 'paragraph'] }),
       PlaceholderExt.configure({
